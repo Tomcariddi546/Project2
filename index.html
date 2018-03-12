@@ -1,0 +1,477 @@
+<!doctype html>
+<html>
+
+<head>
+	<title>BMA</title>
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style>
+		.ac_panels {
+			width: 500px;
+
+			border-top: 1px solid black;
+			justify-content: center;
+			padding-bottom: 155px;
+			padding-top: 20px;
+		}
+
+		.accontainer {
+			max-width: 700px;
+			margin: 0px auto 30px auto;
+		}
+
+		.ac {
+			border: 1px #000 solid;
+			margin-bottom: 15px;
+		}
+
+		.ac>h3 {
+			background-repeat: no-repeat;
+			background-position: center right;
+			margin: 10px;
+			padding: 5px;
+		}
+
+		.ac_content:after {
+			content: ".";
+			visibility: hidden;
+			display: block;
+			height: 0;
+			clear: both;
+		}
+
+		.acleft,
+		.acright {
+			float: left;
+		}
+
+		.acright {
+			width: 300px;
+			padding: 0px 30px;
+		}
+
+		.acleft {
+			width: 178px;
+		}
+
+		.acleft img {
+			max-width: 100%;
+		}
+
+		.ac>div {
+			display: none;
+			padding: 0px 0px 0px 20px;
+		}
+
+		.ac>h3,
+		.cola,
+		.expa {
+			cursor: pointer;
+		}
+		.blogi{
+			display:inline-block; 
+		}
+		.blogp{
+			display:inline-block;
+			vertical-align: top;
+		
+		}
+	</style>
+	<style>
+		.page {
+			max-width: 1100px;
+			width: 100%;
+			margin: auto;
+		}
+
+	</style>
+	<style>
+		#container {
+			margin: 0 auto;
+			max-width: 600px;
+		}
+
+		#display {
+			max-width: 100%;
+		}
+
+		#thumbs {
+			list-style: none;
+			padding: 0px;
+			text-align: center;
+		}
+
+		li {
+			display: inline-block;
+		}
+
+		#thumbs img {
+			max-width: 50px;
+			border: 1px solid #f00;
+		}
+
+	</style>
+</head>
+
+<body>
+	<div class="page">
+		<nav class="headr">
+			<ul class="headrlist1">
+				<li>Home</li>
+				<li>Contact</li>
+				<li>Anotha One</li>
+			</ul>
+		</nav>
+		<div id="Logo"></div>
+		<div id="title"></div>
+		<div class="blackbr"></div>
+
+
+		<!-- Carousel!!!-->
+
+		<div class="fluid-container">
+			<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+
+				<ol class="carousel-indicators">
+					<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+					<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+					<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+				</ol>
+
+				<div class="carousel-inner" role="listbox">
+
+					<div class="item active">
+						<img src='assets/img/Carousel1.jpg'>
+						<div class="carousel-caption">
+							<p>Restaurants</p>
+						</div>
+					</div>
+
+					<div class="item">
+						<img src="assets/img/Carousel2.jpg">
+						<div class="carousel-caption">
+							<p>Bars</p>
+						</div>
+					</div>
+
+					<div class="item">
+						<img src='assets/img/Carousel3.jpg'>
+						<div class="carousel-caption">
+							<p>Department Stores</p>
+						</div>
+					</div>
+				</div>
+
+				<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+				<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+				<span class="sr-only">Previous</span>
+			</a>
+				<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+				<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+				<span class="sr-only">Next</span>
+			</a>
+			</div>
+		</div>
+
+		<ul class="nav nav-tabs">
+			<li class="active"><a data-toggle="tab" href="#tabs-1">Upcoming Events</a></li>
+			<li><a data-toggle="tab" href="#tabs-2">Company Listings</a></li>
+			<li><a data-toggle="tab" href="#tabs-3">Job Board</a></li>
+		</ul>
+
+		<!--tabs content-->
+		<div class="tab-content">
+			<div id="tabs-1" class="tab-pane fade in active">
+				<h3>What's New?</h3>
+				<div class="row">
+					<div class="col-sm-3 centerthis">
+						<p class="eventdate">Friday 3/9</p>
+						<h5>Title for event</h5>
+						<img src="assets/img/Beer.jpg"></div>
+					<div class="col-sm-3 centerthis">
+						<p class="eventdate">Friday 3/9</p>
+						<h5>Title for event</h5>
+						<img src="assets/img/UE1.png"></div>
+					<div class="col-sm-3 centerthis">
+						<p class="eventdate">Friday 3/9</p>
+						<h5>Title for event</h5>
+						<img src="assets/img/UE2.png"></div>
+					<div class="col-sm-3 centerthis">
+						<p class="eventdate">Friday 3/9</p>
+						<h5>Title for event</h5>
+						<img src="assets/img/UE3.png"></div>
+				</div>
+			</div>
+			<div id="tabs-2" class="tab-pane fade">
+
+				<div class="accontainer">
+					<h1>Explore What We Have</h1>
+					<p>click the panels to see what's available!
+						<div class="ac bru">
+							<h3>Eat</h3>
+							<div class="ac_content">
+
+
+								<div class="ac_panels">
+									<div class="acleft"><img src="assets/img/CLEAT1.png">
+									</div>
+									<div class="acright">
+										<p>Restaurant Name<br>Restaurant Location<br>Restaurant site</p>
+									</div>
+								</div>
+
+
+								<div class="ac_panels">
+									<div class="acleft"><img src="assets/img/CLEAT2.png">
+									</div>
+									<div class="acright">
+										<p>Restaurant Name<br>Restaurant Location<br>Restaurant site</p>
+									</div>
+								</div>
+
+
+								<div class="ac_panels">
+									<div class="acleft"><img src="assets/img/CLEAT3.png">
+									</div>
+									<div class="acright">
+										<p>Restaurant Name<br>Restaurant Location<br>Restaurant site</p>
+									</div>
+								</div>
+							</div>
+						</div>
+
+
+						<div class="ac bru">
+							<h3>Entertainment</h3>
+							<div class="ac_content">
+
+								<div class="ac_panels">
+									<div class="acleft"><img src="assets/img/CLENT1.png">
+									</div>
+									<div class="acright">
+										<p>Restaurant Name<br>Restaurant Location<br>Restaurant site</p>
+									</div>
+								</div>
+								<div class="ac_panels">
+									<div class="acleft"><img src="assets/img/CLENT2.jpg">
+									</div>
+									<div class="acright">
+										<p>Restaurant Name<br>Restaurant Location<br>Restaurant site</p>
+									</div>
+								</div>
+
+								<div class="ac_panels">
+									<div class="acleft"><img src="assets/img/CLENT3.png">
+									</div>
+									<div class="acright">
+										<p>Restaurant Name<br>Restaurant Location<br>Restaurant site</p>
+									</div>
+								</div>
+
+							</div>
+						</div>
+
+
+						<div class="ac bru">
+							<h3>Retail</h3>
+							<div class="ac_content">
+								<div class="ac_panels">
+									<div class="acleft"><img src="assets/img/CLRET1.png">
+									</div>
+									<div class="acright">
+										<p>Restaurant Name<br>Restaurant Location<br>Restaurant site</p>
+									</div>
+								</div>
+								<div class="ac_panels">
+									<div class="acleft"><img src="assets/img/CLRET2.png">
+									</div>
+									<div class="acright">
+										<p>Restaurant Name<br>Restaurant Location<br>Restaurant site</p>
+									</div>
+								</div>
+
+								<div class="ac_panels">
+									<div class="acleft"><img src="assets/img/CLRET3.png">
+									</div>
+									<div class="acright">
+										<p>Restaurant Name<br>Restaurant Location<br>Restaurant site</p>
+									</div>
+								</div>
+							</div>
+						</div>
+				</div>
+
+			</div>
+			<div id="tabs-3" class="tab-pane fade">
+				<h3>Who's here?</h3>
+				<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+			</div>
+		</div>
+
+		<div class="blackbr"></div>
+
+		<div class="blog">
+			<h1>View Our Blog Posts</h1>
+			<div id="accordion">
+				<h3>Blog Post Title</h3>
+				<div><img class='blogi' src="assets/img/BPP1.jpeg"><p class='blogp'><b>Millenial investor says Brooklyn is the new Manahttan</b><br>Paul G Newman doesnt exist but this is definitely a filler paragraph for text that would talk about something rewlated to the title blah blah</p>
+				</div>
+				<h3>Bees are dying at an alarming rate</h3>
+				<div>
+					<div><img class='blogi' src="assets/img/BPP2.jpeg"><p class='blogp'><b>Millenial investor says Brooklyn is the new Manahttan</b><br>Paul G Newman doesnt exist but this is definitely a filler paragraph for text that would talk about something rewlated to the title blah blah</p>
+				</div>
+				</div>
+				<h3>Send Help</h3>
+				<div>
+					<div><img class='blogi' src="assets/img/BPP3.jpg"><p class='blogp'><b>Owen Wilson No Longer Wow-ing?</b><br>Nobody appreciates being a meme, but Owen Wilson is taking this one personally. He's vowed to never say the word "wow" again!</p>
+					</div></div>
+				</div>
+			</div>
+		
+		<div id="Instagram">
+			<h2>Check out our Instagram!</h2>
+			<img id="display" src="assets/img/INST3.jpg">
+			<ul id="thumbs">
+				<li><img src="assets/img/INST1.jpg"></li>
+				<li><img src="assets/img/INST2.jpg"></li>
+				<li><img src="assets/img/INST3.jpg"></li>
+			</ul>
+		</div>
+		<div class='blackbr'></div>
+		<div class="footer">
+			<!-- FIGURE OUT HOW TO FORMAT THIS-->
+			<h3>Broadway merchants association</h3><br>
+			<h4>Broadway and Gates Ave, Brooklyn NY 11221</h4>
+			<nav class="footernav">
+				<div class="col-xs-2">
+					<ul>
+						<li>Join</li>
+						<li>Subscribe</li>
+						<li>job board</li>
+						<li>Events</li>
+						<li>company listings</li>
+					</ul>
+				</div>
+				<div class="col-xs-2">
+					<ul>
+						<li>News</li>
+						<li>careers</li>
+						<li>Press Releases</li>
+						<li>Advertising</li>
+					</ul>
+				</div>
+				<div class="col-xs-2">
+					<ul>
+						<li>Visit</li>
+						<li>space</li>
+						<li>Rental</li>
+						<li>Submit</li>
+					</ul>
+					<div class='col-xs-2 links'>
+						<i class="fa fa-facebook-square" style="font-size:48px;color:red"></i>
+						<i class="fa fa-instagram" style="font-size:48px;color:red"></i>
+					</div>
+				</div>
+			</nav>
+		</div>
+		<script src="js/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+		<script>
+			$(function() {
+				$("#tabs").tabs({
+					collapsible: true
+				});
+			});
+
+		</script>
+		<script>
+			$(function() {
+				$("#accordion").accordion();
+			});
+
+		</script>
+		<script>
+			//capture all the H3s...
+			var ach = document.querySelectorAll('.ac > H3');
+
+			//...loop through them and do the following
+			for (a = 0; a < ach.length; a++) {
+
+				//1. look for the the class bru or tru to establish theme styles
+				if (ach[a].parentElement.className.indexOf('bru') > -1) {
+					ach[a].style.cssText = 'background-image:url("bru-closed.jpg"); color:#532997;';
+				} else {
+					ach[a].style.cssText = 'background-image:url("tru-closed.jpg"); color:#005faf;';
+				}
+
+				//2. bind a click event to toggle the display of the following sibling
+				// and restyle
+				ach[a].onclick = function() {
+					var acStuff = this.nextElementSibling;
+					var ad = acStuff.style.display;
+					if (ad == "none" || ad == "") {
+						acStuff.style.display = 'block';
+						var bg = this.style.backgroundImage.replace('closed', 'opened');
+						this.style.backgroundImage = bg;
+					} else {
+						acStuff.style.display = 'none';
+						var bg = this.style.backgroundImage.replace('opened', 'closed');
+						this.style.backgroundImage = bg;
+					}
+				};
+
+			}
+
+			// collpase and expand links dynamically for each accordian
+
+			//first create the links dynamically for each accordion container
+			var acc = document.querySelectorAll('.accontainer');
+			for (var i = 0; i < acc.length; i++) {
+				var dl = document.createElement("p");
+				dl.innerHTML = '<b class="cola">collapse all</b> | <b class="expa">expand all</b>';
+				acc[i].appendChild(dl);
+
+			}
+
+			//trigger click on expanded accordians to collapse
+			var btn = document.querySelectorAll('.cola, .expa');
+			for (var i = 0; i < btn.length; i++) {
+				btn[i].onclick = function() {
+					var acStuff = this.parentElement.parentElement.querySelectorAll('.ac > .ac_content');
+					for (var i = 0; i < acStuff.length; ++i) {
+						var ph = acStuff[i].previousElementSibling;
+						if (this.className.indexOf("expa") > -1) {
+							dy = 'block';
+							bg = ph.style.backgroundImage.replace('closed', 'opened');
+						} else {
+							dy = 'none';
+							bg = ph.style.backgroundImage.replace('opened', 'closed');
+						}
+						acStuff[i].style.display = dy;
+						ph.style.backgroundImage = bg;
+					}
+				}
+			}
+
+		</script>
+		<script>
+			thumbs = (document.querySelectorAll("#thumbs img"));
+			for (i = 0; i < thumbs.length; ++i) {
+				thumbs[i].onclick = function() {
+					imgsrc = this.src;
+					imgsrc = imgsrc.replace('thumb', 'full');
+					document.getElementById('display').src = imgsrc;
+				};
+			};
+
+		</script>
+	</div>
+</body>
+
+</html>
