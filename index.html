@@ -2,16 +2,18 @@
 <html>
 
 <head>
+	
+	<!-- Carousel pics-->
 	<title>BMA</title>
+	<link href="https://fonts.googleapis.com/css?family=Lora|Oxygen|Rozha+One" rel="stylesheet">
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="css/style.css">
 	<style>
 		.ac_panels {
 			width: 500px;
-
 			border-top: 1px solid black;
 			justify-content: center;
 			padding-bottom: 155px;
@@ -71,13 +73,14 @@
 		.expa {
 			cursor: pointer;
 		}
-		.blogi{
-			display:inline-block; 
+
+		.blogi {
+			display: inline-block;
 		}
-		.blogp{
-			display:inline-block;
+
+		.blogp {
+			display: inline-block;
 			vertical-align: top;
-		
 		}
 	</style>
 	<style>
@@ -86,7 +89,6 @@
 			width: 100%;
 			margin: auto;
 		}
-
 	</style>
 	<style>
 		#container {
@@ -96,11 +98,12 @@
 
 		#display {
 			max-width: 100%;
+			text-align: center;
 		}
 
 		#thumbs {
 			list-style: none;
-			padding: 0px;
+			padding: 20px;
 			text-align: center;
 		}
 
@@ -113,19 +116,71 @@
 			border: 1px solid #f00;
 		}
 
+		.modal {
+			display: none;
+			/* Hidden by default */
+			position: fixed;
+			/* Stay in place */
+			z-index: 1;
+			/* Sit on top */
+			left: 0;
+			top: 0;
+			width: 100%;
+			/* Full width */
+			height: 100%;
+			/* Full height */
+			overflow: auto;
+			/* Enable scroll if needed */
+			background-color: rgb(0, 0, 0);
+			/* Fallback color */
+			background-color: rgba(0, 0, 0, 0.4);
+			/* Black w/ opacity */
+		}
+		/* Modal Content/Box */
+
+		.modal-content {
+			background-color: #fefefe;
+			margin: 15% auto;
+			/* 15% from the top and centered */
+			padding: 20px;
+			border: 1px solid #888;
+			width: 80%;
+			/* Could be more or less, depending on screen size */
+		}
+		/* The Close Button */
+
+		.close {
+			color: #aaa;
+			float: right;
+			font-size: 28px;
+			font-weight: bold;
+		}
+
+		.close:hover,
+		.close:focus {
+			color: black;
+			text-decoration: none;
+			cursor: pointer;
+		}
+		.dy {
+			background-color: white;
+		}
 	</style>
 </head>
 
 <body>
 	<div class="page">
-		<nav class="headr">
+		<div class="blackbr"></div>
+
+		<div id="Logo"></div>
+		<div id="titlee">Broadway Merchants Association</div>
+				<nav class="headr">
 			<ul class="headrlist1">
 				<li>Home</li>
 				<li>Contact</li>
 				<li>Anotha One</li>
 			</ul>
 		</nav>
-		<div id="Logo"></div>
 		<div id="title"></div>
 		<div class="blackbr"></div>
 
@@ -153,7 +208,7 @@
 					<div class="item">
 						<img src="assets/img/Carousel2.jpg">
 						<div class="carousel-caption">
-							<p>Bars</p>
+							<p>Entertainment</p>
 						</div>
 					</div>
 
@@ -185,23 +240,27 @@
 		<!--tabs content-->
 		<div class="tab-content">
 			<div id="tabs-1" class="tab-pane fade in active">
-				<h3>What's New?</h3>
+				<h1>What's New?</h1>
 				<div class="row">
 					<div class="col-sm-3 centerthis">
-						<p class="eventdate">Friday 3/9</p>
-						<h5>Title for event</h5>
+						<h4>Beerfest on Broadway</h4>
+						<p class="eventdate">Wednesday, March 21st
+						<p>Myrtle-Flushing on Broadway</p>
 						<img src="assets/img/Beer.jpg"></div>
 					<div class="col-sm-3 centerthis">
+						<h4>Free Women's BJJ Trial</h4>
 						<p class="eventdate">Friday 3/9</p>
-						<h5>Title for event</h5>
+						<p>At Marlon's BJJ</p>
 						<img src="assets/img/UE1.png"></div>
 					<div class="col-sm-3 centerthis">
-						<p class="eventdate">Friday 3/9</p>
-						<h5>Title for event</h5>
+						<h4>The Power of Mentorship</h4>
+						<p class="eventdate">Friday 3/16</p>
+					<p>Byrons Theater</p>
 						<img src="assets/img/UE2.png"></div>
 					<div class="col-sm-3 centerthis">
-						<p class="eventdate">Friday 3/9</p>
-						<h5>Title for event</h5>
+						<h4>Fresh Pantry Soup Kitchen</h4>
+						<p class="eventdate">Every Thursday</p>
+						Fort Greene and Farragut
 						<img src="assets/img/UE3.png"></div>
 				</div>
 			</div>
@@ -219,7 +278,7 @@
 									<div class="acleft"><img src="assets/img/CLEAT1.png">
 									</div>
 									<div class="acright">
-										<p>Restaurant Name<br>Restaurant Location<br>Restaurant site</p>
+										<p>Jamaica Grill Jerk Center<br>474 Myrtle Avenue<br>Brooklyn, NY 11205<br></p>
 									</div>
 								</div>
 
@@ -228,7 +287,7 @@
 									<div class="acleft"><img src="assets/img/CLEAT2.png">
 									</div>
 									<div class="acright">
-										<p>Restaurant Name<br>Restaurant Location<br>Restaurant site</p>
+										<p>Wray's Caribbean and Seafood Cuisine<br>503 Myrtle Ave<br>Brooklyn,NY 11205<br><a href="http://wraysrestaurant.com/">Visit here!</a></p>
 									</div>
 								</div>
 
@@ -237,7 +296,7 @@
 									<div class="acleft"><img src="assets/img/CLEAT3.png">
 									</div>
 									<div class="acright">
-										<p>Restaurant Name<br>Restaurant Location<br>Restaurant site</p>
+										<p>Buff Patty<br>376 Myrtle Avenue<br> Brooklyn 11205<br><a href="http://buffpattynyc.com/">Visit here!</a></p>
 									</div>
 								</div>
 							</div>
@@ -245,21 +304,21 @@
 
 
 						<div class="ac bru">
-							<h3>Entertainment</h3>
+							<h3 class="accstyle" style="color:#000">Entertainment</h3>
 							<div class="ac_content">
 
 								<div class="ac_panels">
 									<div class="acleft"><img src="assets/img/CLENT1.png">
 									</div>
 									<div class="acright">
-										<p>Restaurant Name<br>Restaurant Location<br>Restaurant site</p>
+										<p>The Emerson<br>561 Myrtle Avenue<br> Brooklyn, NY, 11205<br><a href="http://www.theemersonbar.com/">Visit here!</a></p>
 									</div>
 								</div>
 								<div class="ac_panels">
 									<div class="acleft"><img src="assets/img/CLENT2.jpg">
 									</div>
 									<div class="acright">
-										<p>Restaurant Name<br>Restaurant Location<br>Restaurant site</p>
+										<p>Until Tomorrow Cocktail Bar<br>507 Myrtle Avenue<br> Brooklyn, NY, 11205<br><a href="http://untiltomorrowbk.com/">Visit here!</a></p>
 									</div>
 								</div>
 
@@ -267,7 +326,7 @@
 									<div class="acleft"><img src="assets/img/CLENT3.png">
 									</div>
 									<div class="acright">
-										<p>Restaurant Name<br>Restaurant Location<br>Restaurant site</p>
+										<p>Putnam's Pub and Cooker<br>419 Myrtle Avenue<br> Broooklyn,NY, 11205<br><a href="http://putnamspub.com/">Visit here!</a></p>
 									</div>
 								</div>
 
@@ -282,14 +341,14 @@
 									<div class="acleft"><img src="assets/img/CLRET1.png">
 									</div>
 									<div class="acright">
-										<p>Restaurant Name<br>Restaurant Location<br>Restaurant site</p>
+										<p>Blick Art Supplies<br>534 Myrtle Avenue<br> Brooklyn, NY, 11205<br><a href="http://www.dickblick.com/stores/newyork/brooklyn/">Visit here!</a></p>
 									</div>
 								</div>
 								<div class="ac_panels">
 									<div class="acleft"><img src="assets/img/CLRET2.png">
 									</div>
 									<div class="acright">
-										<p>Restaurant Name<br>Restaurant Location<br>Restaurant site</p>
+										<p>21 Tara<br>388 Myrtle Avenue<br> Brooklyn, NY, 11205<br></p>
 									</div>
 								</div>
 
@@ -297,7 +356,7 @@
 									<div class="acleft"><img src="assets/img/CLRET3.png">
 									</div>
 									<div class="acright">
-										<p>Restaurant Name<br>Restaurant Location<br>Restaurant site</p>
+										<p>Walgreen's<br>379 Myrtle Avenue<br> Brooklyn, NY, 11205<br><a href="www.walgreens.com">Visit here!</a></p>
 									</div>
 								</div>
 							</div>
@@ -306,31 +365,56 @@
 
 			</div>
 			<div id="tabs-3" class="tab-pane fade">
-				<h3>Who's here?</h3>
-				<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
-			</div>
-		</div>
+				<h1>Who's Hiring?</h1>
+<h2>Companies that are hiring</h2>
 
+<div class="row">
+ <div class="column" style="background-color:#FADB9E">
+   <h2>Gamestop</h2>
+   <p>Manager</p>
+      <img src="https://apprecs.org/gp/images/app-icons/150/0d/com.gamestop.powerup.jpg">
+ </div>
+ <div class="column" style="background-color:#EBD6AD">
+   <h2>Best Buy</h2>
+   <p>Floor sales</p>
+      <img src="http://isource.com/wp-content/uploads/2011/10/BestBuy-icon-150x150.jpg">
+ </div>
+ <div class="column" style="background-color:#FFEECC">
+   <h2>Apple</h2>
+   <p>Genius</p>
+      <img src="http://www.vmtocloud.com/wp-content/uploads/2015/05/apple-logo-small.png">
+ </div>
+ <div class="column" style="background-color:#F5EBD6">
+   <h2>Microsoft</h2>
+   <p>Front end deveolper</p>
+      <img src="http://technastic.com/wp-content/uploads/2016/06/Slow-Loading-of-Icons-in-Windows-150x150.jpg">
+ </div>
+				</div>
+			</div>
 		<div class="blackbr"></div>
 
 		<div class="blog">
 			<h1>View Our Blog Posts</h1>
 			<div id="accordion">
 				<h3>Blog Post Title</h3>
-				<div><img class='blogi' src="assets/img/BPP1.jpeg"><p class='blogp'><b>Millenial investor says Brooklyn is the new Manahttan</b><br>Paul G Newman doesnt exist but this is definitely a filler paragraph for text that would talk about something rewlated to the title blah blah</p>
+				<div><img class='blogi' src="assets/img/BPP1.jpeg">
+					<p class='blogp'><b>Millenial investor says Brooklyn is the new Manahttan</b><br>Paul G Newman doesnt exist but this is definitely a filler paragraph for text that would talk about something rewlated to the title blah blah<br><a href="#" class="btn btn-warning btn-sm">View Full Article</a></p>
 				</div>
 				<h3>Bees are dying at an alarming rate</h3>
 				<div>
-					<div><img class='blogi' src="assets/img/BPP2.jpeg"><p class='blogp'><b>Millenial investor says Brooklyn is the new Manahttan</b><br>Paul G Newman doesnt exist but this is definitely a filler paragraph for text that would talk about something rewlated to the title blah blah</p>
-				</div>
+					<div><img class='blogi' src="assets/img/BPP2.jpeg">
+						<p class='blogp'><b>Millenial investor says Brooklyn is the new Manahttan</b><br>Paul G Newman doesnt exist but this is definitely a filler paragraph for text that would talk about something rewlated to the title blah blah<br><a href="#" class="btn btn-warning btn-sm">View Full Article</a></p>
+					</div>
 				</div>
 				<h3>Send Help</h3>
 				<div>
-					<div><img class='blogi' src="assets/img/BPP3.jpg"><p class='blogp'><b>Owen Wilson No Longer Wow-ing?</b><br>Nobody appreciates being a meme, but Owen Wilson is taking this one personally. He's vowed to never say the word "wow" again!</p>
-					</div></div>
+					<div><img class='blogi' src="assets/img/BPP3.jpg">
+						<p class='blogp'><b>Owen Wilson No Longer Wow-ing?</b><br>Nobody appreciates being a meme, but Owen Wilson is taking this one personally. He's vowed to never say the word "wow" again!<br><a href="#" class="btn btn-warning btn-sm">View Full Article</a></p>
+					</div>
 				</div>
 			</div>
-		
+		</div>
+
 		<div id="Instagram">
 			<h2>Check out our Instagram!</h2>
 			<img id="display" src="assets/img/INST3.jpg">
@@ -340,41 +424,74 @@
 				<li><img src="assets/img/INST3.jpg"></li>
 			</ul>
 		</div>
+			
+			<div id="map"><h1>Support our Local Businesses</h1><br>
+				<img src="assets/img/ClientMap.png"></div>
+			
 		<div class='blackbr'></div>
 		<div class="footer">
 			<!-- FIGURE OUT HOW TO FORMAT THIS-->
-			<h3>Broadway merchants association</h3><br>
-			<h4>Broadway and Gates Ave, Brooklyn NY 11221</h4>
+			<div class="titlefooter"><h3>Broadway merchants association</h3><h5>Broadway and Gates Ave, Brooklyn NY 11221</h5></div>
+			<div class="col-xs-2"></div>
 			<nav class="footernav">
 				<div class="col-xs-2">
 					<ul>
-						<li>Join</li>
-						<li>Subscribe</li>
-						<li>job board</li>
-						<li>Events</li>
-						<li>company listings</li>
+						<li>Join</li><br>
+						<li>Subscribe</li><br>
+						<li>job board</li><br>
+						<li>Events</li><br>
+						<li>company listings</li><br><br>
 					</ul>
 				</div>
 				<div class="col-xs-2">
 					<ul>
-						<li>News</li>
-						<li>careers</li>
-						<li>Press Releases</li>
-						<li>Advertising</li>
+						<li>News</li><br>
+						<li>careers</li><br>
+						<li>Press Releases</li><br>
+						<li>Advertising</li><br>
 					</ul>
 				</div>
 				<div class="col-xs-2">
 					<ul>
-						<li>Visit</li>
-						<li>space</li>
-						<li>Rental</li>
-						<li>Submit</li>
+						<li>Visit</li><br>
+						<li>space</li><br>
+						<li>Rental</li><br>
+						<li>Submit</li><br>
 					</ul>
-					<div class='col-xs-2 links'>
-						<i class="fa fa-facebook-square" style="font-size:48px;color:red"></i>
-						<i class="fa fa-instagram" style="font-size:48px;color:red"></i>
+				</div>
+				<div class='col-xs-2 links'>
+					<i class="fa fa-facebook-square" style="font-size:48px;color:red"></i>
+					<i class="fa fa-instagram" style="font-size:48px;color:red"></i><br>
+					<p>Subscribe to our Newsletter</p>
+					<!-- Trigger/Open The Modal -->
+					<button id="myBtn">Click Here</button>
+
+					<!-- The Modal -->
+					<div id="myModal" class="modal">
+
+						<!-- Modal content -->
+						<div class="modal-content">
+							<span class="close">&times;</span>
+									<form>
+			<label> Full Name<br>
+					<input type="text" name="FullName" placeholder="John Doe">
+				</label>
+			<label> Mobile<br>
+					<input type="tel" name="phone" placeholder="212-123-4567">
+				</label>
+			<label> Email<br>
+					<input type="email" name="email" placeholder="Youremail@gmail.com">
+				</label>
+
+			<input type="submit" name="submit" value="Join the Newsletter!">
+
+		</form>
+						</div>
+
 					</div>
+					
 				</div>
+
 			</nav>
 		</div>
 		<script src="js/jquery.min.js"></script>
@@ -388,13 +505,11 @@
 					collapsible: true
 				});
 			});
-
 		</script>
 		<script>
 			$(function() {
 				$("#accordion").accordion();
 			});
-
 		</script>
 		<script>
 			//capture all the H3s...
@@ -458,7 +573,6 @@
 					}
 				}
 			}
-
 		</script>
 		<script>
 			thumbs = (document.querySelectorAll("#thumbs img"));
@@ -469,8 +583,35 @@
 					document.getElementById('display').src = imgsrc;
 				};
 			};
-
 		</script>
+		<script>
+			// Get the modal
+			var modal = document.getElementById('myModal');
+
+			// Get the button that opens the modal
+			var btn = document.getElementById("myBtn");
+
+			// Get the <span> element that closes the modal
+			var span = document.getElementsByClassName("close")[0];
+
+			// When the user clicks on the button, open the modal 
+			btn.onclick = function() {
+				modal.style.display = "block";
+			}
+
+			// When the user clicks on <span> (x), close the modal
+			span.onclick = function() {
+				modal.style.display = "none";
+			}
+
+			// When the user clicks anywhere outside of the modal, close it
+			window.onclick = function(event) {
+				if (event.target == modal) {
+					modal.style.display = "none";
+				}
+			}
+		</script>
+	</div>
 	</div>
 </body>
 
